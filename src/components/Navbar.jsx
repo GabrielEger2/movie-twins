@@ -68,7 +68,7 @@ const Navbar = () => {
           <div
             className={
               !nav
-                ? 'ease-in-out fixed top-[-40%]'
+                ? 'ease-in-out fixed top-[-100%]'
                 : 'fixed left-0 top-0 w-full border-b border-b-mtyellow bg-mtblack ease-in-out duration-500 z-20'
             }
           >
