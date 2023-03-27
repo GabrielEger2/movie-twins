@@ -36,12 +36,13 @@ const Navbar = () => {
   return (
     <div className="bg-mtblack fixed top-0 w-full z-50">
       <div className="flex justify-between items-center h-20 max-w-[1200px] mx-auto px-6">
-        <h1 className="w-full md:text-6xl text-4xl font-bold text-mtyellow title-font mt-2">
+        <h1 className="w-full md:text-6xl text-4xl font-bold text-mtyellow title-font mt-2 tracking-[0.1rem]"
+        style={{ textShadow: '4px 4px #8F43EE'}}>
           <a href="#home">Movie Twins</a>
         </h1>
         <ul className="md:flex hidden justify-center items-center">
           <li className="px-4 py-2 text-2xl text-mtpurple hover:underline">
-            <a href="#home">Home</a>
+            <a href="#home">HOME</a>
           </li>
           <li className="px-4 py-2 text-2xl text-mtpurple hover:underline">
             <a href="#menu">TMDB</a>
@@ -52,7 +53,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Search for a twin"
-                className="lg:w-96 w-64 py-1 px-2 text-xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite"
+                className="lg:w-96 w-60 py-1 px-2 text-xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite"
               />
                 <button type="submit" className="absolute inset-y-0 right-0 flex rounded-md items-center px-4  bg-mtgray">
                   <MdOutlineSearch size={26} className="text-mtpurple hover:text-mtyellow hover:scale-125 duration-300" />

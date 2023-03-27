@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderRadius: {
+        'xll': '8rem',
+      },
       colors: {
         mtblack: "#2D2727",
         mtgray: "#413543",
