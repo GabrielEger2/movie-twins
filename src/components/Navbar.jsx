@@ -53,7 +53,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Search for a twin"
-                className="lg:w-96 w-60 py-1 px-2 text-xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite"
+                className="lg:w-96 w-56 py-1 px-2 text-xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite"
               />
                 <button type="submit" className="absolute inset-y-0 right-0 flex rounded-md items-center px-4  bg-mtgray">
                   <MdOutlineSearch size={26} className="text-mtpurple hover:text-mtyellow hover:scale-125 duration-300" />

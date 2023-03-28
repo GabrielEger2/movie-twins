@@ -21,8 +21,8 @@ const Home = () => {
   console.log(topMovies);
 
   return (
-    <div className="mt-20 flex justify-between max-w-[1340px] mx-auto px-6 items-center">
-      <div className="p-6 overflow-hidden flex-col justify-center">
+    <div className="mt-20 flex justify-between max-w-[1300px] mx-auto px-6 items-center">
+      <div className="flex flex-col items-center justify-center md:relative pt-4 md:p-4 md:pt-0  flex-grow">
         <h1 className="text-8xl font-bold text-mtyellow title-font mt-2 text-center tracking-[0.1rem]"
         style={{ textShadow: '8px 8px #8F43EE'}}>
           MOVIE TWINS
@@ -37,12 +37,12 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="p-6 pt-12 overflow-hidden">
-      <img
-        src="https://imgs.search.brave.com/8APRHd03Kn0Vl1iKOPqD6wdzAr4FSXl_ZTOcQ-oX4n4/rs:fit:382:498:1/g:ce/aHR0cHM6Ly9tZWRp/YS50ZW5vci5jb20v/b2tvTkNOdXB4WklB/QUFBQy9zY3JlYW0t/bW92aWUtc2NyZWFt/LmdpZg.gif"
-        alt="My Image"
-        className="rounded-bl-xll rounded-tr-xll h-[80vh] w-[550px] object-cover ml-auto"
-      />
+      <div className="hidden md:block xl:pr-40 lg:pr-32 p-6 pt-8">
+        <img
+          src="https://giffiles.alphacoders.com/216/216074.gif"
+          alt="Movie GIF"
+          className="rounded-bl-xll rounded-tr-xll h-[500px] w-[55vh] object-cover ml-auto"
+        />
       </div>
     </div>
   );
