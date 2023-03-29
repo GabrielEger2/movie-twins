@@ -11,6 +11,7 @@ module.exports = {
       },
       colors: {
         mtblack: "#2D2727",
+        mtdarkgray: "#342a35",
         mtgray: "#413543",
         mtpurple: "#8F43EE",
         mtyellow: "#F0EB8D",

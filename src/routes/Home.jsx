@@ -20,8 +20,6 @@ const Home = () => {
     getTopRatedMovies(topRatedUrl);
   }, []);
 
-  console.log(topMovies);
-
   const [selectedGif, setSelectedGif] = useState(gifs[Math.floor(Math.random() * gifs.length)]);
 
   return (
@@ -37,8 +35,8 @@ const Home = () => {
               Go Safe. <br />
               Watch the <span style={{ textShadow: '4px 4px #8F43EE, 6px 6px 12px black'}}>Same</span>
             </h1>
-            <div className="text-center mt-8">
-              <button class="bg-mtyellow text-mtgray border-mtblack shadow-mtpurple rounded-none py-4 px-8 title-font text-4xl hover:scale-110 tracking-[0.1rem] font-bold">
+            <div className="text-center mt-12">
+              <button class="bg-mtyellow text-mtgray border-mtblack shadow-mtpurple rounded-none py-4 px-8 title-font text-4xl hover:scale-110 duration-300 tracking-[0.1rem] font-bold">
                 SEARCH! 
               </button>
             </div>
