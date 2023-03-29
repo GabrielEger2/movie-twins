@@ -33,7 +33,7 @@ useEffect(() => {
         <div className='flex justify-center'>
         <div className='max-w-[1300px]'>
             <div className='mt-6'>
-            <h1 className='text-5xl text-mtyellow font-bold text-center text-shadow mt-10'>SEARCH FOR SIMILAR MOVIES</h1>
+            <h1 className='text-3xl md:text-5xl text-mtyellow font-bold text-center text-shadow mt-10'>SEARCH FOR SIMILAR MOVIES</h1>
             </div>
             <div className='mt-6 mb-6'>
             <form className="flex items-center ml-4 mr-4">
@@ -59,7 +59,7 @@ useEffect(() => {
                     <img className='object-cover rounded-xl pointer-events-none' src={`https://image.tmdb.org/t/p/w500/${element.poster_path}`} alt='Movie Image' />
                     <h1 className='p-1 text-base md:text-2xl text-center text-mtyellow text-shadow mt-2'>{element.title}</h1>
                     <div className='flex justify-center'>
-                      <button class="mt-6 bg-mtyellow text-mtgray border-mtblack rounded-none py-4 px-8 title-font text-2xl hover:scale-110 tracking-[0.1rem] font-bold justify-center">
+                      <button class="mt-6 mb-6 bg-mtyellow text-mtgray border-mtblack rounded-none py-4 px-8 title-font text-2xl hover:scale-110 duration-300 tracking-[0.1rem] font-bold justify-center">
                         SEARCH! 
                       </button>
                     </div>
