@@ -73,7 +73,8 @@ const Navbar = () => {
                 : 'fixed left-0 top-0 w-full border-b border-b-mtyellow bg-mtblack ease-in-out duration-500 z-20'
             }
           >
-            <h1 className="w-full text-4xl font-bold text-mtyellow m-6 title-font">
+            <h1 className="w-full text-4xl font-bold text-mtyellow m-6 title-font tracking-[0.1rem]"
+            style={{ textShadow: '4px 4px #8F43EE'}}>
               Movie Twins
             </h1>
             <ul className="text-mtpurple">
