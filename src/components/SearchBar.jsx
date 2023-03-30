@@ -5,28 +5,30 @@ import { motion } from 'framer-motion';
 const moviesURL = 'https://api.themoviedb.org/3/movie/';
 const apiKey = import.meta.env.VITE_TMDB_KEY;
 
+
 const SearchBar = () => {
 
-const [topMovies, setTopMovies] = useState([]);
+  const [topMovies, setTopMovies] = useState([]);
 
-const getTopRatedMovies = async (url) => {
-    const res = await fetch(url);
-    const data = await res.json();
-    setTopMovies(data.results);
-};
-  
-useEffect(() => {
-    const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
-    console.log(topRatedUrl);
-    getTopRatedMovies(topRatedUrl);
-}, []);
+  const getTopRatedMovies = async (url) => {
+      const res = await fetch(url);
+      const data = await res.json();
+      setTopMovies(data.results);
+  };
     
-const [width, setWidth] = useState(0);
-const screenSize = useRef();
+  useEffect(() => {
+      const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
+      console.log(topRatedUrl);
+      getTopRatedMovies(topRatedUrl);
+  }, []);
+      
 
-useEffect(() => {
-    setWidth(screenSize.current.scrollWidth - screenSize.current.offsetWidth)
-}, []);
+  const [width, setWidth] = useState(0);
+    const screenSize = useRef();
+
+  useEffect(() => {
+      setWidth(screenSize.current.scrollWidth - screenSize.current.offsetWidth)
+  }, []);
 
   return (
     <div className='pb-10 mt-6 bg-mtdarkgray'>
