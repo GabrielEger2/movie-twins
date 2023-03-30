@@ -45,7 +45,7 @@ const Home = () => {
             <img
               src={selectedGif}
               alt="Movie GIF"
-              className="rounded-bl-xll rounded-tr-xll h-[650px] w-[55vh] object-cover ml-auto"
+              className="rounded-bl-xll rounded-tr-xll h-[70vh] max-h-[650px] w-[55vh] object-cover ml-auto"
             />
           </div>
         </div>

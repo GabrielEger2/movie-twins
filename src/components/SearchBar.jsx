@@ -36,39 +36,44 @@ useEffect(() => {
             <h1 className='text-3xl md:text-5xl text-mtyellow font-bold text-center text-shadow mt-10'>SEARCH FOR SIMILAR MOVIES</h1>
             </div>
             <div className='mt-6 mb-6'>
-            <form className="flex items-center ml-4 mr-4">
+            <form className="flex items-center -p-4">
                 <input
                 type="text"
                 placeholder="Search for a twin"
                 className="
-                lg:w-[800px] md:w-[500px] flex-grow py-2 px-4 text-2xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite translate-x-2"
+                lg:w-[800px] md:w-[500px] flex-grow py-2 px-4 text-2xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite translate-x-5"
                 />
-                <button type="submit" className="flex items-center justify-center w-16 h-full rounded-md bg-mtgray z-40 -translate-x-2">
-                <MdOutlineSearch size={48} className="text-mtpurple hover:text-mtyellow hover:scale-125 duration-300" />
+                <button type="submit" className="flex items-center justify-center w-16 h-full rounded-md bg-mtgray z-40 -translate-x-5">
+                <MdOutlineSearch size={48} className="text-mtpurple hover:text-mtyellow hover:scale-125 duration-300 p-2" />
                 </button>
             </form>
             </div>
         </div>
       </div>
-      <div className='w-full flex px-4 mt-4'>
+      <div className='flex justify-center md:mt-4 mt-2'>
         <div ref={screenSize} className='overflow-hidden flex' style={{ margin: '0 5%' }}>
-            <motion.div drag='x' dragConstraints={{ right: 0, left: -width }} className='flex gap-4 md:gap-8'>
+          <motion.div drag='x' dragConstraints={{ right: 0, left: -width }} className='flex gap-4 md:gap-8'>
             {topMovies.map((element) => {
-                return (
-                    <motion.div key={element.id} className='w-52 md:w-60 p-2 bg-mtgray rounded-lg cursor-grab overflow-hidden'>
-                    <img className='object-cover rounded-xl pointer-events-none' src={`https://image.tmdb.org/t/p/w500/${element.poster_path}`} alt='Movie Image' />
-                    <h1 className='p-1 text-base md:text-2xl text-center text-mtyellow text-shadow mt-2'>{element.title}</h1>
+              return (
+                <motion.div key={element.id} className='w-52 md:w-60 p-2 bg-mtgray rounded-lg cursor-grab overflow-hidden'>
+                  <img className='object-cover rounded-xl pointer-events-none' src={`https://image.tmdb.org/t/p/w500/${element.poster_path}`} alt='Movie Image' />
+                  <div className='flex flex-col'>
+                    <h1 className='p-1 text-base md:text-2xl text-center text-mtyellow text-shadow mt-2 mb-0 md:mb-6 h-20'>{element.title}</h1>
                     <div className='flex justify-center'>
-                      <button class="mt-6 mb-6 bg-mtyellow text-mtgray border-mtblack rounded-none py-4 px-8 title-font text-2xl hover:scale-110 duration-300 tracking-[0.1rem] font-bold justify-center">
-                        SEARCH! 
-                      </button>
+                      <div style={{ height: '80px', display: 'flex', alignItems: 'center' }}>
+                        <button className="
+                        mt-6 mb-6 bg-mtyellow text-mtgray border-mtblack rounded-none py-4 px-8 title-font text-2xl hover:scale-110 duration-300 tracking-[0.1rem] font-bold justify-center items-end">
+                          SEARCH! 
+                        </button>
+                      </div>
                     </div>
-                  </motion.div>
-                );
+                  </div>
+                </motion.div>
+              );
             })}
-            </motion.div>
+          </motion.div>
         </div>
-        </div>
+      </div>
     </div>
   )
 }
