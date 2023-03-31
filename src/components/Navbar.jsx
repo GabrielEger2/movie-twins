@@ -3,6 +3,9 @@ import { MdMovie, MdClose, MdOutlineSearch } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+  
+
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {

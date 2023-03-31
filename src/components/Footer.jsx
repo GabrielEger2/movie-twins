@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
               <a href="" className="flex items-center">
                   <img src="/favicon.png" className="h-8 mr-3" alt="Movie Twins Logo" />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap text-mtyellow" style={{ textShadow: '4px 4px #8F43EE'}}>Movie Twins</span>
+                  <span className="self-center text-2xl font-semibold whitespace-nowrap text-mtyellow" style={{ textShadow: '3px 3px #8F43EE'}}>Movie Twins</span>
               </a>
           </div>
           <div class="grid grid-cols-2 gap-12 md:gap-6 sm:grid-cols-3">

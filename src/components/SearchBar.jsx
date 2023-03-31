@@ -26,9 +26,9 @@ const SearchBar = () => {
   const [width, setWidth] = useState(0);
     const screenSize = useRef();
 
-  useEffect(() => {
+    useEffect(() => {
       setWidth(screenSize.current.scrollWidth - screenSize.current.offsetWidth)
-  }, []);
+    }, [screenSize]);
 
   return (
     <div className='pb-10 mt-6 bg-mtdarkgray'>
@@ -55,10 +55,10 @@ const SearchBar = () => {
       <div className='flex justify-center md:mt-4 mt-2'>
         <div ref={screenSize} className='overflow-hidden flex' style={{ margin: '0 5%' }}>
           <motion.div drag='x' dragConstraints={{ right: 0, left: -width }} className='flex gap-4 md:gap-8'>
-            {topMovies.map((element) => {
+            {topMovies && topMovies.map((element) => {
               return (
                 <motion.div key={element.id} className='w-52 md:w-60 p-2 bg-mtgray rounded-lg cursor-grab overflow-hidden'>
-                  <img className='object-cover rounded-xl pointer-events-none' src={`https://image.tmdb.org/t/p/w500/${element.poster_path}`} alt='Movie Image' />
+                  <img className='object-cover rounded-xl pointer-events-none' src={`https://image.tmdb.org/t/p/w500/${element.poster_path}`} alt={element.title} />
                   <div className='flex flex-col'>
                     <h1 className='p-1 text-base md:text-2xl text-center text-mtyellow text-shadow mt-2 mb-0 md:mb-6 h-20'>{element.title}</h1>
                     <div className='flex justify-center'>
