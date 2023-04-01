@@ -18,7 +18,7 @@ const Footer = () => {
                   <span className="self-center text-2xl font-semibold whitespace-nowrap text-mtyellow" style={{ textShadow: '4px 4px #8F43EE'}}>Movie Twins</span>
               </a>
           </div>
-          <div class="grid grid-cols-2 gap-12 md:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-12 md:gap-6 sm:grid-cols-3">
               <div>
                   <h2 className="mb-6 text-sm font-semibold uppercase text-mtwhite">Resources</h2>
                   <ul className="text-gray-400 font-medium">
@@ -56,7 +56,7 @@ const Footer = () => {
       </div>
       <hr className="my-6 sm:mx-auto  border-gray-700 lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm sm:text-center  text-gray-400">© {current_year} Papa's Pizza. MIT License.
+          <span className="text-sm sm:text-center  text-gray-400">© {current_year} Movie Twins. MIT License.
           </span>
       </div>
     </div>

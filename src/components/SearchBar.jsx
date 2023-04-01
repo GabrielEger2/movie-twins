@@ -24,11 +24,11 @@ const SearchBar = () => {
       
 
   const [width, setWidth] = useState(0);
-    const screenSize = useRef();
+  const screenSize = useRef();
 
-    useEffect(() => {
-      setWidth(screenSize.current.scrollWidth - screenSize.current.offsetWidth)
-    }, []);
+  useEffect(() => {
+    setWidth(screenSize.current.scrollWidth - screenSize.current.offsetWidth)
+  }, [topMovies]);
 
   return (
     <div className='pb-10 mt-6 bg-mtdarkgray'>

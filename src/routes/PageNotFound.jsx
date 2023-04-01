@@ -9,10 +9,10 @@ const PageNotFound = () => {
           <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center py-32 xl:py-40">
             <div className="w-full font-mono flex flex-col items-center relative z-10">
               <h1 className="font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-5xl text-center text-white leading-tight mt-4">
-                "I'm sorry dave I'm afraid I can't do that"<br/> -2001: A Space Odyssey
+                "I'm sorry dave. I'm afraid I can't do that"<br/> -2001: A Space Odyssey
               </h1>
-              <p className="font-extrabold text-8xl my-44 text-white animate-bounce">
-                404
+              <p className="font-extrabold text-6xl my-44 text-white animate-bounce text-center">
+                Page Not Found <br/> 404
               </p>
             </div>
           </div>
