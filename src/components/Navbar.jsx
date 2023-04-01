@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { MdMovie, MdClose, MdOutlineSearch } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const [search, setSearch] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if(!search) return
+
+    navigate(`/search/q=${search}`);
+    setSearch("")
+  };
+
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -44,14 +55,18 @@ const Navbar = () => {
           <li>
             <div className="flex items-center ml-4">
               <div className="relative">
-              <input
-                type="text"
-                placeholder="Search for a twin"
-                className="lg:w-[30rem] w-80 py-1 px-2 text-xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite"
-              />
-                <button type="submit" className="absolute inset-y-0 right-0 flex rounded-md items-center px-4  bg-mtgray">
-                  <MdOutlineSearch size={26} className="text-mtpurple hover:text-mtyellow hover:scale-125 duration-300" />
-                </button>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Search for a twin"
+                  className="lg:w-[30rem] w-80 py-1 px-2 text-xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite"
+                  onChange={(e) => setSearch(e.target.value)}
+                  value={search}
+                />
+                  <button type="submit" className="absolute inset-y-0 right-0 flex rounded-md items-center px-4  bg-mtgray">
+                    <MdOutlineSearch size={26} className="text-mtpurple hover:text-mtyellow hover:scale-125 duration-300" />
+                  </button>
+                </form>
               </div>
             </div>
           </li>
@@ -75,14 +90,18 @@ const Navbar = () => {
               <li className='border-b border-mtyellow'>
                 <div className="p-4 flex items-center justify-center mb-3">
                   <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search for a twin"
-                    className="w-[100%] py-1 px-2 text-xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite"
-                  />
-                    <button type="submit" className="absolute inset-y-0 right-0 flex rounded-md items-center px-4  bg-mtgray">
-                      <MdOutlineSearch size={26} className="text-mtpurple hover:text-mtyellow hover:scale-125 duration-300" />
-                    </button>
+                    <form onSubmit={handleSubmit}>
+                      <input
+                        type="text"
+                        placeholder="Search for a twin"
+                        className="w-[100%] py-1 px-2 text-xl rounded-md focus:outline-none focus:shadow-outline bg-mtgray text-mtwhite"
+                        onChange={(e) => setSearch(e.target.value)}
+                        value={search}
+                      />
+                        <button type="submit" className="absolute inset-y-0 right-0 flex rounded-md items-center px-4  bg-mtgray">
+                          <MdOutlineSearch size={26} className="text-mtpurple hover:text-mtyellow hover:scale-125 duration-300" />
+                        </button>
+                    </form>
                   </div>
                 </div>
               </li>

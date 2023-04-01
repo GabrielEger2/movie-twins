@@ -6,6 +6,7 @@ import App from "./App";
 import Home from "./routes/Home";
 import Movie from "./routes/Movie";
 import Search from "./routes/Search";
+import PageNotFound from "./routes/PageNotFound";
 
 import "./index.css";
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
         { path: "/", element: <Home /> },
         { path: "/movie/:id", element: <Movie /> },
         { path: "/search", element: <Search /> },
+        { path: "*", element: <PageNotFound />}
     ]
  },
 ])
