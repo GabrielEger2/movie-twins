@@ -17,7 +17,7 @@ const SearchBar = () => {
   };
     
   useEffect(() => {
-      const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
+      const topRatedUrl = `${moviesURL}top_rated?api_key=${apiKey}`;
       console.log(topRatedUrl);
       getTopRatedMovies(topRatedUrl);
   }, []);
