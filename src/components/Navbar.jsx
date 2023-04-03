@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-20 max-w-[1200px] mx-auto px-6">
         <h1 className="w-full md:text-6xl text-4xl font-bold text-mtyellow title-font mt-2 tracking-[0.1rem]"
         style={{ textShadow: '4px 4px #8F43EE'}}>
-          <a href="#home">Movie Twins</a>
+          <Link to="/">Movie Twins</Link>
         </h1>
         <ul className="md:flex hidden justify-center items-center">
           <li>
@@ -84,7 +84,7 @@ const Navbar = () => {
           >
             <h1 className="w-full text-4xl font-bold text-mtyellow m-6 title-font tracking-[0.1rem]"
             style={{ textShadow: '4px 4px #8F43EE'}}>
-              Movie Twins
+              <Link to="/">Movie Twins</Link>
             </h1>
             <ul className="text-mtpurple">
               <li className='border-b border-mtyellow'>
