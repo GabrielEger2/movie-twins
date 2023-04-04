@@ -14,7 +14,8 @@ const MovieCard = ({ movie, showLink = true }) => {
         </p>
         <div className='flex justify-center'>
           <div style={{ height: '80px', display: 'flex', alignItems: 'center' }}>
-            <button className='mt-4 mb-6 bg-mtyellow text-mtgray border-mtblack rounded-none py-4 px-8 title-font text-2xl hover:scale-110 duration-300 tracking-[0.1rem] font-bold justify-center items-end'>
+            <button className='
+            mt-4 mb-6 md:py-4 md:px-8 md:text-xl bg-mtyellow text-mtgray border-mtblack rounded-none py-2 px-4 title-font text-2xl hover:scale-110 duration-300 tracking-[0.1rem] font-bold justify-center items-end'>
               {showLink && <Link to={`/movie/${movie.id}`}>View Details</Link>}
             </button>
           </div>
