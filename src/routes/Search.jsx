@@ -64,7 +64,7 @@ const Search = () => {
               <div className='flex flex-col lg:flex-row justify-between py-8'>
                 <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
                   {movies.map((movie) => (
-                    <div className='border border-mtyellow shadow-lg bg-mtdarkgray rounded-lg'>
+                    <div className='border border-mtyellow shadow-lg bg-mtdarkgray rounded-lg hover:scale-105 transition-transform duration-200'>
                       <MovieCard key={movie.id} movie={movie} />
                     </div>
                   ))}

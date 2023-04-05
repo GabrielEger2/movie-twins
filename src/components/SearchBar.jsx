@@ -48,6 +48,7 @@ const SearchBar = () => {
   useEffect(() => {
     setWidth(screenSize.current.scrollWidth - screenSize.current.offsetWidth)
   }, [topMovies]);
+  
 
   useEffect(() => {
     const handleLinkClick = (event) => {
@@ -65,6 +66,7 @@ const SearchBar = () => {
       });
     };
   }, []);
+  
 
   return (
     <div className='pb-10 mt-6 bg-mtdarkgray'>

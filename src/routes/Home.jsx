@@ -35,11 +35,6 @@ const Home = () => {
               Go Safe. <br />
               Watch the <span style={{ textShadow: '4px 4px #8F43EE, 6px 6px 12px black'}}>Same</span>
             </h1>
-            <div className="text-center mt-12">
-              <button className="bg-mtyellow text-mtgray border-mtblack shadow-mtpurple rounded-none py-4 px-8 title-font text-4xl hover:scale-110 duration-300 tracking-[0.1rem] font-bold">
-                SEARCH! 
-              </button>
-            </div>
           </div>
           <div className="hidden md:block pt-8 ml-O lg:ml-16">
             <img
@@ -50,7 +45,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <SearchBar />
+      <div id="SearchBar">
+        <SearchBar />
+      </div>
     </div>
     
     
