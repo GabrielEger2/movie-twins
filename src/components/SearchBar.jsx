@@ -24,6 +24,7 @@ const SearchBar = () => {
     event.preventDefault();
     navigate(`/search?search=${movie.title}`);
     setSearch("");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const [topMovies, setTopMovies] = useState([]);
@@ -53,13 +54,6 @@ const SearchBar = () => {
       event.preventDefault();
       const target = event.target.hash;
       const element = document.querySelector(target);
-      if (element) {
-        const topOffset = element.offsetTop;
-        window.scrollTo({
-          top: topOffset,
-          behavior: 'smooth',
-        });
-      }
     };
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach((link) => {

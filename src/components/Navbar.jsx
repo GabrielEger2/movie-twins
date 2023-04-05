@@ -12,6 +12,7 @@ const Navbar = () => {
   
     navigate(`/search?search=${search}`);
     setSearch("")
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const [nav, setNav] = useState(false);
@@ -20,18 +21,24 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  
+  function ScrollLink({ to, children }) {
+    const handleClick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    return (
+      <Link to={to} onClick={handleClick}>
+        {children}
+      </Link>
+    );
+  }
+
   useEffect(() => {
     const handleLinkClick = (event) => {
       event.preventDefault();
       const target = event.target.hash;
       const element = document.querySelector(target);
-      if (element) {
-        const topOffset = element.offsetTop;
-        window.scrollTo({
-          top: topOffset,
-          behavior: 'smooth',
-        });
-      }
     };
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach((link) => {
@@ -49,7 +56,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-20 max-w-[1200px] mx-auto px-6">
         <h1 className="w-full md:text-6xl text-4xl font-bold text-mtyellow title-font mt-2 tracking-[0.1rem]"
         style={{ textShadow: '4px 4px #8F43EE'}}>
-          <Link to="/">Movie Twins</Link>
+          <ScrollLink  to="/">Movie Twins</ScrollLink >
         </h1>
         <ul className="md:flex hidden justify-center items-center">
           <li>
@@ -84,7 +91,7 @@ const Navbar = () => {
           >
             <h1 className="w-full text-4xl font-bold text-mtyellow m-6 title-font tracking-[0.1rem]"
             style={{ textShadow: '4px 4px #8F43EE'}}>
-              <Link to="/">Movie Twins</Link>
+              <ScrollLink  to="/">Movie Twins</ScrollLink>
             </h1>
             <ul className="text-mtpurple">
               <li className='border-b border-mtyellow'>

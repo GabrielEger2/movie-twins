@@ -40,44 +40,46 @@ const Movie = () => {
   }, []);
 
   return (
-    <div className=" mt-20 bg-[#413543]">
+    <div className="mt-20 bg-[#413543]">
       {movie && (
         <>
-          <div className="mb-10 pt-12 flex items-center justify-center">
-            <div className="flex items-stretch">
-              <div className="bg-mtyellow p-8 w-[80vh] shadow-lg rounded-lg overflow-hidden -mr-8 z-0">
-                <h2 className="text-2xl font-semibold mb-1">{movie.title}</h2>
-                <span className="text-mtblack font-semibold">{movie.tagline}</span>
-                <div className="mt-4 text-mtblack">
-                  <div className="mb-2">
-                    <h3 className="flex items-center">
-                      <BsWallet2 className="mr-2" /> Budget:
-                    </h3>
-                    <p>{formatCurrency(movie.budget)}</p>
-                  </div>
-                  <div className="mb-2">
-                    <h3 className="flex items-center">
-                      <BsGraphUp className="mr-2" /> Revenue:
-                    </h3>
-                    <p>{formatCurrency(movie.revenue)}</p>
-                  </div>
-                  <div className="mb-2">
-                    <h3 className="flex items-center">
-                      <BsHourglassSplit className="mr-2" /> Length:
-                    </h3>
-                    <p>{movie.runtime} Minutes</p>
-                  </div>
-                  <div className="mb-2">
-                    <h3 className="flex items-center">
-                      <BsFillFileEarmarkTextFill className="mr-2" /> Synopsis:
-                    </h3>
-                    <p>{movie.overview}</p>
-                  </div>
+          <div className="mb-10 pt-12 flex flex-col items-center justify-center md:flex-row">
+            <div className="md:w-[80vh] bg-mtyellow p-8 shadow-lg rounded-lg overflow-hidden md:-mr-8 md:z-0">
+              <h2 className="text-2xl font-semibold mb-1">{movie.title}</h2>
+              <span className="text-mtblack font-semibold">{movie.tagline}</span>
+              <div className="mt-4 text-mtblack">
+                <div className="mb-2">
+                  <h3 className="flex items-center">
+                    <BsWallet2 className="mr-2" /> Budget:
+                  </h3>
+                  <p>{formatCurrency(movie.budget)}</p>
+                </div>
+                <div className="mb-2">
+                  <h3 className="flex items-center">
+                    <BsGraphUp className="mr-2" /> Revenue:
+                  </h3>
+                  <p>{formatCurrency(movie.revenue)}</p>
+                </div>
+                <div className="mb-2">
+                  <h3 className="flex items-center">
+                    <BsHourglassSplit className="mr-2" /> Length:
+                  </h3>
+                  <p>{movie.runtime} Minutes</p>
+                </div>
+                <div className="mb-2">
+                  <h3 className="flex items-center">
+                    <BsFillFileEarmarkTextFill className="mr-2" /> Synopsis:
+                  </h3>
+                  <p>{movie.overview}</p>
                 </div>
               </div>
-              <div className=" w-96 bg-cover bg-center shadow-lg rounded-lg -my-5">
-                    <img  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="movie poster" />
-                  </div>
+            </div>
+            <div className="md:w-96 md:-my-5">
+              <img
+                className="w-full h-auto md:h-full md:rounded-lg md:shadow-lg"
+                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                alt="movie poster"
+              />
             </div>
           </div>
         </>

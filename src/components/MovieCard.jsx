@@ -3,6 +3,18 @@ import { BsFillStarFill } from 'react-icons/bs';
 
 const imageUrl = 'https://image.tmdb.org/t/p/w500/';
 
+function ScrollLink({ to, children }) {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <Link to={to} onClick={handleClick}>
+      {children}
+    </Link>
+  );
+}
+
 const MovieCard = ({ movie, showLink = true }) => {
   return (
     <div className='max-w-[1640px] m-auto'>
@@ -16,7 +28,7 @@ const MovieCard = ({ movie, showLink = true }) => {
           <div style={{ height: '80px', display: 'flex', alignItems: 'center' }}>
             <button className='
             mt-4 mb-6 md:py-4 md:px-8 md:text-xl bg-mtyellow text-mtgray border-mtblack rounded-none py-2 px-4 title-font text-2xl hover:scale-110 duration-300 tracking-[0.1rem] font-bold justify-center items-end'>
-              {showLink && <Link to={`/movie/${movie.id}`}>View Details</Link>}
+              {showLink && <ScrollLink to={`/movie/${movie.id}`}>View Details</ScrollLink>}
             </button>
           </div>
         </div>
