@@ -3,7 +3,7 @@ import SearchBar from "../components/SearchBar";
 import { gifs } from "../data/gifs";
 
 const moviesURL = 'https://api.themoviedb.org/3/movie/';
-const apiKey = import.meta.env.VITE_TMDB_KEY;
+const apiKey = import.meta.env.VITE_REACT_TMDB_KEY;
 
 const Home = () => {
   const [topMovies, setTopMovies] = useState([]);

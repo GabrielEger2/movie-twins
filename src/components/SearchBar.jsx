@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 
 const moviesURL = 'https://api.themoviedb.org/3/movie/';
-const apiKey = import.meta.env.VITE_TMDB_KEY;
+const apiKey = import.meta.env.VITE_REACT_TMDB_KEY;
 
 
 const SearchBar = () => {

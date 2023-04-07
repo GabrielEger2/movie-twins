@@ -5,7 +5,7 @@ import PageNotFound from "./PageNotFound";
 import SearchBar from '../components/SearchBar';
 
 const searchUrl = 'https://api.themoviedb.org/3/search/movie';
-const apiKey = import.meta.env.VITE_TMDB_KEY;
+const apiKey = import.meta.env.VITE_REACT_TMDB_KEY;
 
 const Search = () => {
   const location = useLocation();

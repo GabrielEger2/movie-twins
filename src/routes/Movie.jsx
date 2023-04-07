@@ -11,7 +11,7 @@ import MovieCard from "../components/MovieCard";
 import SearchBar from "../components/SearchBar";
 
 const moviesURL = 'https://api.themoviedb.org/3/movie/';
-const apiKey = import.meta.env.VITE_TMDB_KEY;
+const apiKey = import.meta.env.VITE_REACT_TMDB_KEY;
 
 const Movie = () => {
   const { id } = useParams();
