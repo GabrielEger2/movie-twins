@@ -1,6 +1,6 @@
 // Import React and related modules
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Import the components used in the router
@@ -28,8 +28,9 @@ const router = createBrowserRouter([
 ]);
 
 // Render the app using ReactDOM
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.render(
   <React.StrictMode>
     <RouterProvider router={router} /> {/* The RouterProvider provides the router to the app */}
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
