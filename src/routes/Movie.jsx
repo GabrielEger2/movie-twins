@@ -10,19 +10,26 @@ import {
 import MovieCard from "../components/MovieCard";
 import SearchBar from "../components/SearchBar";
 
+// URL for accessing movie data from the API
 const moviesURL = 'https://api.themoviedb.org/3/movie/';
+
 const apiKey = import.meta.env.VITE_REACT_TMDB_KEY;
 
 const Movie = () => {
+  // Extracts the movie ID from the URL parameter
   const { id } = useParams();
+
+  // State to store the movie data fetched from the API
   const [movie, setMovie] = useState(null);
 
+  // Function to fetch the movie data from the API and update the state
   const getMovie = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
     setMovie(data);
   };
 
+  // Function to format a number as currency
   const formatCurrency = (number) => {
     if (number) {
       return number.toLocaleString("en-US", {
@@ -33,6 +40,7 @@ const Movie = () => {
     return "";
   };
 
+  // Fetches the movie data from the API when the component mounts
   useEffect(() => {
     const movieUrl = `${moviesURL}${id}?api_key=${apiKey}`;
     getMovie(movieUrl);

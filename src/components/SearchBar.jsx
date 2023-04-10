@@ -6,12 +6,14 @@ import { Link, useNavigate } from 'react-router-dom';
 const moviesURL = 'https://api.themoviedb.org/3/movie/';
 const apiKey = import.meta.env.VITE_REACT_TMDB_KEY;
 
-
+// This component represents a search bar that allows users to search for similar movies.
 const SearchBar = () => {
 
+  // useState hooks for handling user input and navigation
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
 
+  // handleSubmit function is called when the search form is submitted
   const handleSubmit = (event) => {
     event.preventDefault();
     if(!search) return
@@ -20,6 +22,7 @@ const SearchBar = () => {
     setSearch("")
   };
 
+  // searchHandleSubmit function is called when a movie is clicked
   const searchHandleSubmit = (event, movie) => {
     event.preventDefault();
     navigate(`/search?search=${movie.title}`);
@@ -27,21 +30,24 @@ const SearchBar = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // useState hook for storing the top rated movies
   const [topMovies, setTopMovies] = useState([]);
 
+  // getTopRatedMovies function is called to retrieve the top rated movies from the API
   const getTopRatedMovies = async (url) => {
       const res = await fetch(url);
       const data = await res.json();
       setTopMovies(data.results);
   };
     
+  // useEffect hook for retrieving the top rated movies from the API on initial render
   useEffect(() => {
       const topRatedUrl = `${moviesURL}top_rated?api_key=${apiKey}`;
       console.log(topRatedUrl);
       getTopRatedMovies(topRatedUrl);
   }, []);
       
-
+  // useState hook and useEffect hook for setting the width of the top rated movies container
   const [width, setWidth] = useState(0);
   const screenSize = useRef();
 
@@ -49,7 +55,7 @@ const SearchBar = () => {
     setWidth(screenSize.current.scrollWidth - screenSize.current.offsetWidth)
   }, [topMovies]);
   
-
+  // useEffect hook for handling links within the search bar
   useEffect(() => {
     const handleLinkClick = (event) => {
       event.preventDefault();
@@ -66,7 +72,6 @@ const SearchBar = () => {
       });
     };
   }, []);
-  
 
   return (
     <div className='pb-10 mt-6 bg-mtdarkgray'>

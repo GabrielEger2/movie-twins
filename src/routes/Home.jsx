@@ -6,22 +6,26 @@ const moviesURL = 'https://api.themoviedb.org/3/movie/';
 const apiKey = import.meta.env.VITE_REACT_TMDB_KEY;
 
 const Home = () => {
-  const [topMovies, setTopMovies] = useState([]);
+  const [topMovies, setTopMovies] = useState([]); // state for top rated movies
 
+  // function to fetch and set top rated movies
   const getTopRatedMovies = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
     setTopMovies(data.results);
   };
 
+  // effect hook to get top rated movies on component mount
   useEffect(() => {
     const topRatedUrl = `${moviesURL}top_rated?api_key=${apiKey}`;
     getTopRatedMovies(topRatedUrl);
   }, []);
 
-  const [selectedGif, setSelectedGif] = useState(gifs[Math.floor(Math.random() * gifs.length)]);
+  const [selectedGif, setSelectedGif] = useState(gifs[Math.floor(Math.random() * gifs.length)]); // state for random movie gif
+
 
   return (
+
     <div>
       <div className="flex flex-col items-center justify-center">
         <div className="mt-20 flex justify-between max-w-[1300px] mx-auto px-6 items-center">
@@ -48,8 +52,6 @@ const Home = () => {
         <SearchBar />
       </div>
     </div>
-    
-    
   );
 };
 
