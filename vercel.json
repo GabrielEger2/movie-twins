@@ -1,0 +1,7 @@
+{
+    "routes": [
+      { "src": "/movie/:id", "dest": "/movie/:id" },
+      { "src": "/search", "dest": "/search" },
+      { "src": "/.*", "dest": "/index.html" }
+    ]
+  }
