@@ -17,6 +17,12 @@ module.exports = {
         mtyellow: "#F0EB8D",
         mtwhite: "#fff"
       },
+      padding: {
+        '1.2': '0.3rem',
+      },
+      margin: {
+        '5.5': '1.375rem',
+      },
     },
   },
   plugins: [],

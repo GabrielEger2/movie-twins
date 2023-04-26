@@ -23,7 +23,39 @@ html, body {
   text-shadow: 4px 4px 10px black;
 }
 
+.truncate {
+  max-width: 300px;
+}
 
+@media (min-width: 768px) {
+  .truncate {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .truncate {
+    max-width: 800px;
+  }
+}
+
+.truncateNav {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1023px) {
+  .truncateNav {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .truncateNav {
+    max-width: 480px;
+  }
+}
 
 body{
     background-color: #413543;
