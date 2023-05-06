@@ -47,7 +47,7 @@ const Movie = () => {
   }, []);
 
   return (
-    <div className="mt-20 bg-[#413543]">
+    <div className="mt-20 bg-[#121212]">
       {movie && (
         <>
           <div className="mb-10 pt-12 flex flex-col items-center justify-center md:flex-row">

@@ -136,7 +136,7 @@ const Navbar = () => {
         <div className="text-mtpurple bg-mtgray p-2 rounded-full mt-5 mb-4 block md:hidden z-50" onClick={handleNav}>
           {!nav ? <MdMovie size={30}/> : <MdClose size={30}/>}
         </div>
-        <div className=" z-20">
+        <div className="block md:hidden z-20">
           <div
             className={
               !nav

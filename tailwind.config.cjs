@@ -10,11 +10,11 @@ module.exports = {
         'xll': '8rem',
       },
       colors: {
-        mtblack: "#2D2727",
-        mtdarkgray: "#342a35",
-        mtgray: "#413543",
-        mtpurple: "#8F43EE",
-        mtyellow: "#F0EB8D",
+        mtblack: "#0b0b0b",
+        mtdarkgray: "#0e0e0e",
+        mtgray: "#121212",
+        mtpurple: "#6E1FD6",
+        mtyellow: "#DDEA1F",
         mtwhite: "#fff"
       },
       padding: {

@@ -64,7 +64,7 @@ const Search = () => {
   }, [encodedQuery]);
 
   return (
-    <div className='mt-20 bg-[#413543] '>
+    <div className='mt-20 bg-[#121212] '>
       {foundMovies ? (
         <>
           <div>
